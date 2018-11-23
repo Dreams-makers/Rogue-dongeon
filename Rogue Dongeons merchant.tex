@@ -1,0 +1,263 @@
+%% Based on a TeXnicCenter-Template by Tino Weinkauf.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% HEADER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,twoside,10pt]{report}
+% Alternative Options:
+%	Paper Size: a4paper / a5paper / b5paper / letterpaper / legalpaper / executivepaper
+% Duplex: oneside / twoside
+% Base Font Size: 10pt / 11pt / 12pt
+
+
+%% Language %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[USenglish]{babel} %francais, polish, spanish, ...
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+
+\usepackage{lmodern} %Type1-font for non-english texts and characters
+
+
+%% Packages for Graphics & Figures %%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx} %%For loading graphic files
+%\usepackage{subfig} %%Subfigures inside a figure
+%\usepackage{pst-all} %%PSTricks - not useable with pdfLaTeX
+
+%% Please note:
+%% Images can be included using \includegraphics{Dateiname}
+%% resp. using the dialog in the Insert menu.
+%% 
+%% The mode "LaTeX => PDF" allows the following formats:
+%%   .jpg  .png  .pdf  .mps
+%% 
+%% The modes "LaTeX => DVI", "LaTeX => PS" und "LaTeX => PS => PDF"
+%% allow the following formats:
+%%   .eps  .ps  .bmp  .pict  .pntg
+
+
+%% Math Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+
+%% Line Spacing %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{setspace}
+%\singlespacing        %% 1-spacing (default)
+%\onehalfspacing       %% 1,5-spacing
+%\doublespacing        %% 2-spacing
+
+
+%% Other Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{a4wide} %%Smaller margins = more text per page.
+%\usepackage{fancyhdr} %%Fancy headings
+%\usepackage{longtable} %%For tables, that exceed one page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Remarks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TODO:
+% 1. Edit the used packages and their options (see above).
+% 2. If you want, add a BibTeX-File to the project
+%    (e.g., 'literature.bib').
+% 3. Happy TeXing!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Options / Modifications
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\input{options} %You need a file 'options.tex' for this
+%% ==> TeXnicCenter supplies some possible option files
+%% ==> with its templates (File | New from Template...).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\pagestyle{empty} %No headings for the first pages.
+
+
+%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ==> Write your text here or include other files.
+
+%% The simple version:
+\title{GDD Rogue Dongeons Merchant}
+\author{Virgile Lebailly}
+%\date{} %%If commented, the current date is used.
+\maketitle
+
+%% The nice version:
+%\input{titlepage} %%You need a file 'titlepage.tex' for this.
+%% ==> TeXnicCenter supplies a possible titlepage file
+%% ==> with its templates (File | New from Template...).
+
+
+%% Inhaltsverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents %Table of contents
+\cleardoublepage %The first chapter should start on an odd page.
+
+\pagestyle{plain} %Now display headings: headings / fancy / ...
+
+
+
+%% Chapters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ==> Write your text here or include other files.
+
+%\input{intro} %You need a file 'intro.tex' for this.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ==> Some hints are following:
+\paragraph{Résumé}\label{Resume}
+
+Rogue Dongeons Merchant est un jeu RPG-Rogue like. \\
+Le but du jeu est de traverser 5 donjons pour affronter un boss final. \\
+Le type de chaque donjons est tiré aléatoirement parmi 10 existant, chaque type ne pouvant être présent qu'une seule fois par partie.\\
+Le héro retourne en ville entre chaque donjon et peut vendre et acheter des objets au marchant.\\
+Les monstres des donjons n+1 seront amélioré grâce aux objets non acheté.\\
+Le boss de fin qui se trouve être le marchant sera amélioré grâce les objets vendu au marchant.\\
+L'inventaire du marchant se réinitialisera entre chaque donjon.
+
+\part{Gameplay}\label{Gameplay}
+
+\chapter{Résumé du Gameplay}\label{ResGP}
+
+RDM est un jeu vu du dessus pour la partie exploration et la partie combat.\\
+Le héro possède des caractéristiques variant grace à son équipement.\\
+Le héro possède un inventaire avec des emplacements d'équipement.\\
+Ces emplacements sont : Tête, Epaule, Torse, Amulette, Brassard, Gants, Pantalon, Bottes, Ceinture, 2x Bague.\\
+\\
+Dans les donjons, les ennemis seront visibles et le héro entrera en combat à leur contact et/ou quand il rentre dans leur champs de vision selon les monstres.\\
+Le combat sera une sorte de tour par tour en temps réel. Le héro, ses invocations, les ennemis auront une barre de temps. Chacun d'entre eux pourra faire une action une fois cette barre rempli qui se vide au moment de l'utilisation. Si le joueur attends, les autres barres arriveront à terme et le joueur pourra switch entre son héro et ses invocations au détriment du fait que les ennemis attaqueront dès leur barre rempli.
+
+\chapter{Donjons}\label{Dj}
+
+\section{Donjon mort-vivant}\label{UndeadDj}
+
+\subsection{Description du Donjon Mort-vivant}
+
+Le Donjon mort vivant ressemble à une crypte avec quelques aménagement marécageux.\\
+Ses habitants sont pour la plupart des morts-vivants (Zombies, Squelettes, vampires, Liche, Dragon Mort-vivant...) mais peuvent être leur sbire ou des habitants des marais (Loups-garoux, limon...).
+
+\section{Donjon de l'eau}\label{WaterDj}
+
+\subsection{Description du Donjon de l'eau}
+
+Le Donjon de l'eau possède l'apparence d'un ancien donjon immergé.\\
+Il est basé sur des énigmes bien relou qui consistent généralement à faire varier la hauteur de l'eau pour pouvoir passer.\\
+Ses habitants sont des créatures vivant dans l'eau ou à proximité (sirènes, pieuvre, serpent de mer, élémentaire d'eau, pêcheur...).
+
+\section{Donjon Cathédrale}\label{HolyDj}
+
+\subsection{Description du Donjon Cathédrale}
+
+Le Donjon Cathédrale possède l'apparence d'un temple de lumière.\\
+Ses habitants sont des prêtres (paladins...) ou créature divine (archon, ange, élémentaire de lumière...) qui vous punieront être impur d'être entré dans leur lieu sacré.
+
+\section{Donjon Pirate}\label{PirateDj}
+
+\subsection{Description du Donjon Pirate}
+
+Le Donjon Pirate possède l'apparence d'un port et de bateau.\\
+Ses habitants sont des pirates et autres créatures maritimes (Forbant, Flibustier, Canaille, Mécréant).
+
+\section{Donjon mercenaire}\label{MercenaryDj}
+
+\subsection{Description du Donjon mercenaire}
+
+Le donjon mercenaire est un patchwork dont la salle dépend des créatures étant à l'intérieur de celle-ci.
+Ses habitants sont les créatures des 5 donjons qui n'ont pas été généré.
+
+\section{Donjon forêt}\label{XDj}
+
+\subsection{Description du Donjon forêt}
+
+Le donjon forêt possède l'apparence d'une forêt.
+Ses habitants sont des druides, créature enchantée et animaux (Ours, loup, fée, doppelganger, tréant...)
+
+\section{Donjon Démoniaque}\label{DeamonsDj}
+
+\subsection{Description du Donjon Démoniaque}
+
+Le donjon démoniaque à une apparence aride et désolée rouge.
+Ses habitants sont des démons et leur esclaves (Démons, succubes, esclave humains...)
+
+\section{Donjon Sous-terrain}\label{UndergroundDj}
+
+\subsection{Description du Donjon Sous-terrain}
+
+Le Donjon Sous-terrain à une apparence de grotte très sombre.
+Ses habitants sont des drows et créature des sous-terrains (Tyrannoeil, skavens, Nains, Dragons...)
+
+\section{Donjon de Mage}\label{WizardDj}
+
+\subsection{Description du Donjon de Mage}
+
+Le Donjon de Mage à une apparence de tour de mage.
+Ses habitants sont des apprentis mage, golem, créatures élémentaires.
+
+\section{Donjon Classique}\label{ClassicDj}
+
+\subsection{Description du Donjon Classique}
+
+Le Donjon classique à l'apparence d'un chateau.
+Ses habitants sont des peaux vertes, kobolds, magiciens...
+
+\part{Histoire}\label{Story}
+
+\chapter{Héros}\label{Heroes}
+
+\chapter{Village}\label{Village}
+
+\part{HUD}\label{HUD}
+
+
+%% <== End of hints
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BIBLIOGRAPHY AND OTHER LISTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% A small distance to the other stuff in the table of contents (toc)
+\addtocontents{toc}{\protect\vspace*{\baselineskip}}
+
+%% The Bibliography
+%% ==> You need a file 'literature.bib' for this.
+%% ==> You need to run BibTeX for this (Project | Properties... | Uses BibTeX)
+%\addcontentsline{toc}{chapter}{Bibliography} %'Bibliography' into toc
+%\nocite{*} %Even non-cited BibTeX-Entries will be shown.
+%\bibliographystyle{alpha} %Style of Bibliography: plain / apalike / amsalpha / ...
+%\bibliography{literature} %You need a file 'literature.bib' for this.
+
+%% The List of Figures
+\clearpage
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+
+%% The List of Tables
+\clearpage
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% APPENDICES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+%% ==> Write your text here or include other files.
+
+%\input{FileName} %You need a file 'FileName.tex' for this.
+
+
+\end{document}
+
