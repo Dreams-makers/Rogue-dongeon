@@ -126,7 +126,8 @@ Le type de chaque donjons est tiré aléatoirement parmi 10 existant, chaque type 
 Le héro retourne en ville entre chaque donjon et peut vendre et acheter des objets au marchant.\\
 Les monstres des donjons n+1 seront amélioré grâce aux objets non acheté.\\
 Le boss de fin qui se trouve être le marchant sera amélioré grâce les objets vendu au marchant.\\
-L'inventaire du marchant se réinitialisera entre chaque donjon.
+L'inventaire du marchant se réinitialisera entre chaque donjon.\\
+Une partie dure entre 1h et 1h30.
 
 \part{Gameplay}\label{Gameplay}
 
@@ -145,11 +146,79 @@ Vue du dessus, on peut bouger dans 6 directions.\\
 \includegraphics[scale=0.35]{8directions}
 Le personnage ne peut bouger à travers les autres personnages, qu'ils soient amis ou ennemis.\\
 
+\section{Menu général}
+\begin{itemize}
+	\item Commencer la partie/Reprendre la partie\\
+	Emmène sur l'écran d'option de création d'une partie si aucune partie n'est commencée. Charge la partie si une partie est en cours.
+	\item Options\\
+	Les options graphistes, sonores (voir la section des options)
+	\item Cimetière\\
+	Le cimetière permet de consulter la liste des héros morts au combat. Affichant leur nom, la cause de la mort (ennemi ou attaque ?) leur score.
+	\item Fosse commune\\
+	La fosse commune permet de consulter la liste des héros suicidés.
+	\item Quitter le jeu\\
+	Sauvegarde et quitte le jeu
+\end{itemize}
+
+\section{Menu en jeu}
+
+\begin{itemize}
+	\item Options\\
+	Les options graphistes, sonores (voir la section des options)
+	\item Abandonner la partie\\
+	Abandonne la partie avec un message ``Attention, si vous abandonnez votre partie, vous ne gagnerez pas d'expérience ni de hauts faits.''
+	\item Retour au menu\\
+	Sauvegarde et retourne au menu  général
+	\item Quitter le jeu\\
+	Sauvegarde et quitte le jeu
+\end{itemize}
+	
+\section{Ecran de création d'une partie}
+
+Dans la création d'une partie, l'on peut choisir :
+\begin{itemize}
+	\item La classe du personnage
+	\item Son skin
+	\item Son nom\\
+	Le skin du personnage peut varier selon le nom du personnage (blague de dev)
+	\item Les options de difficulté d'une partie si le joueur en a débloqué.
+\end{itemize}
+
+\section{Boutons Keybind}
+
+Alt+F4 : Suicider le héro. (Ne peut être rebind par le joueur, même via les fichiers)
+
+\section{Suicide}
+
+Le suicide provoqué par un alt + F4 fait que le héro se tue d'une manière correspondant a son équipement et/ou sa classe.\\
+A ce moment une petite scène apparait provoquant la venue de kévin qui vient se moquer du héro mort étendu par terre.\\
+Le suicide met fin à la partie et ne donne aucun xp et ne débloque pas les achievements accomplis.
+
 \section{Gameplay en ville}
 
 \section{Gameplay en donjon}
 
+\subsection{Les ennemis}
+
+Les ennemis sont visibles sur le terrain. L'ennemi est représenté par l'un des monstres. De base l'ennemi est représenté par le plus gros d'entre eux à moins que celui-ci n'ai la capacité furtif \label{Furtif}. Certaines classes ou capacités permettent de voir soit l'ennemi le plus fort, soit la totalité des membres du groupe d'ennemis.\\
+Si l'ennemi voit le héro, il l'attaquera.
+
+\subsection{Les évènements de donjon}
+
+Un évènement est une interaction que le joueur aura avec quelque chose. Cela peut être l'ouverture d'une porte, le déclanchement d'un piège, la lecture d'un livre en bibliothèque, se soigner avec une fontaine de soin.
+
 \section{Gameplay en combat}
+
+\subsection{Attaque}
+
+\subsection{Magie}
+
+\subsubsection{Invocation}
+
+Les invocations ne peuvent être contrôlées par le joueur. Elles possèdent des armes, caractéristiques et techniques/magies différentes selon la créature qu'elles sont. Elles possèdent une IA qui va agir différemment selon la situation et les ennemis en face. (exemple : Un ange va priorisé le soin si un allié est blessé. Un gobelin va toujours attaquer l'ennemi possédant le moins de force.)\\
+Le joueur peut utiliser des magies pour orienter son action. Par exemple, lancer un sort de rage sur un ange va le faire attaquer peut importe que le héro ai besoin de soin ou pas.
+
+\subsection{Objet rapide}
 
 \section{Personnage}
 
@@ -199,7 +268,8 @@ Les emplacements d'objets sont :
 	\item Bague 1
 	\item Bague 2
 \end{itemize}
-Son sac est composé de X emplacements dont certains objets prendront plusieurs emplacements pour être posés.
+Son sac est composé de X emplacements dont certains objets prendront plusieurs emplacements pour être posés.\\
+La ceinture à la particularité de posséder des emplacements d'objets rapides. Ces emplacements seront soit des emplacements de potions, des emplacements de parchemins, des emplacements de poussières ou des emplacements génériques pouvant être utilisés pour mettre n'importe quel objet rapide dedans.\\
 
 \chapter{Donjons}\label{Dj}
 
@@ -576,7 +646,7 @@ Le héro se réveille dans une forêt et se rend compte qu'il se trouve à l'intérie
 En suivant le sentier, il arrive à un village. Seule la boutique est ouverte et le marchant lui apprend que le village est enfermé dans une barrière et que pour la défaire, il faut casser 5 sceaux situés dans 5 donjons qui se situent à l'intérieur de la barrière.\\
 Lorsque le héro défait les 5 sceaux, la barrière se brise et en retournant au village, le marchant lui explique que cette barrière se trouvait là pour l'emprinonner. Le marchant affronte le héro. Si le héro gagne, fin joyeuse. Si le marchant gagne, fin où le monde est à feu et à sang.
 
-\part{Héros}\label{Heroes}
+\part{Classes}\label{Classes}
 
 \begin{enumerate}
 	\item Aventurier
@@ -591,7 +661,7 @@ Lorsque le héro défait les 5 sceaux, la barrière se brise et en retournant au vi
 	\item Voleur
 \end{enumerate}
 
-\section{Aventurier}\label{Aventurer}
+\chapter{Aventurier}\label{Aventurer}
 
 Caractéristiques de base :\\
 \begin{itemize}
@@ -624,7 +694,7 @@ Aucun\\
 Malus :\\
 Aucun\\
 
-\section{Paladin}\label{Paladin}
+\chapter{Paladin}\label{Paladin}
 
 Caractéristiques de base :\\
 \begin{itemize}
@@ -657,7 +727,7 @@ Sort de départ : Imposition des mains.
 Malus :\\
 Ne peut utiliser de magie d'obscurité ni invoquer autre que des créature céleste.
 
-\section{Invocateur}\label{Summoner}
+\chapter{Invocateur}\label{Summoner}
 
 Caractéristiques de base :\\
 \begin{itemize}
@@ -688,7 +758,7 @@ Et 12 caractéristiques secondaires :
 Bonus :\\
 Malus :\\
 
-\section{Vampire}\label{Vampire}
+\chapter{Vampire}\label{Vampire}
 
 Caractéristiques de base :\\
 \begin{itemize}
@@ -719,7 +789,7 @@ Et 12 caractéristiques secondaires :
 Bonus :\\
 Malus :\\
 
-\section{Mage de feu}\label{Fire Mage}
+\chapter{Mage de feu}\label{Fire Mage}
 
 Caractéristiques de base :\\
 \begin{itemize}
@@ -750,7 +820,7 @@ Et 12 caractéristiques secondaires :
 Bonus :\\
 Malus :\\
 
-\section{Mage de froid}\label{Frost Mage}
+\chapter{Mage de froid}\label{Frost Mage}
 
 Caractéristiques de base :\\
 \begin{itemize}
@@ -781,7 +851,7 @@ Et 12 caractéristiques secondaires :
 Bonus :\\
 Malus :\\
 
-\section{Mage de terre}\label{Earth Mage}
+\chapter{Mage de terre}\label{Earth Mage}
 
 Caractéristiques de base :\\
 \begin{itemize}
@@ -812,7 +882,7 @@ Et 12 caractéristiques secondaires :
 Bonus :\\
 Malus :\\
 
-\section{Barbare}\label{Barbarian}
+\chapter{Arcaniste}\label{Arcaniste}
 
 Caractéristiques de base :\\
 \begin{itemize}
@@ -843,7 +913,7 @@ Et 12 caractéristiques secondaires :
 Bonus :\\
 Malus :\\
 
-\section{Voleur}\label{Thief}
+\chapter{Barbare}\label{Barbarian}
 
 Caractéristiques de base :\\
 \begin{itemize}
@@ -873,10 +943,175 @@ Et 12 caractéristiques secondaires :
 \end{itemize}
 Bonus :\\
 Malus :\\
+
+\chapter{Voleur}\label{Thief}
+
+Caractéristiques de base :\\
+\begin{itemize}
+	\item Force :
+	\item Dextérité :
+	\item Endurance :
+	\item Intelligence :
+	\item Foi :
+	\item Chance :
+\end{itemize}
+Et 12 caractéristiques secondaires :
+\begin{itemize}
+	\item Résistance au feu :
+	\item Résistance au froid :
+	\item Résistance à la terre :
+	\item Résistance à l'air :
+	\item Résistance à l'obscurité :
+	\item Résistance à la lumière :
+	\item Résistance au poison : 
+	\item Résistance au contrôle mental : 
+	\item Armure :
+	\item Parade :
+	\item Esquive :
+	\item Force d'invocation :
+	\item Bonus de soins :
+	\item Rapidité :
+\end{itemize}
+Bonus :\\
+Malus :\\
+
+\chapter{Kévin}\label{Kevin}
+
+Caractéristiques de base :\\
+\begin{itemize}
+	\item Force :
+	\item Dextérité :
+	\item Endurance :
+	\item Intelligence :
+	\item Foi :
+	\item Chance :
+\end{itemize}
+Et 12 caractéristiques secondaires :
+\begin{itemize}
+	\item Résistance au feu :
+	\item Résistance au froid :
+	\item Résistance à la terre :
+	\item Résistance à l'air :
+	\item Résistance à l'obscurité :
+	\item Résistance à la lumière :
+	\item Résistance au poison : 
+	\item Résistance au contrôle mental : 
+	\item Armure :
+	\item Parade :
+	\item Esquive :
+	\item Force d'invocation :
+	\item Bonus de soins :
+	\item Rapidité :
+\end{itemize}
+Bonus :\\
+Malus :\\
+
+\part{Achievements}\label{Achievements}
+
+\chapter{Heroes's Achievement}
+
+\begin{itemize}
+	\item La vie avant tout\\
+	Réssuciter et tuer un dragon-zombie\\
+	Récompense : Classe Paladin
+	
+	\item En avant ! En avant mes chéries !\\
+	Vaincre 10 groupes de monstres sans taper, lancer de sorts ou d'objet sur les ennemis.\\
+	Récompense : Classe Invocateur
+	
+	\item Le baiser de la mort est la plus douce des caresses\\
+	Mourir du DOT\label{DOT} d'une morsure de vampire.\\
+	Récompense : Classe Vampire
+	
+	\item J'adore l'odeur du Napalm au petit matin\\
+	Infliger X dégâts de feu dans la même partie.\\
+	Récompense : Classe Mage de feu
+	
+	\item Libéré ! Délivré !\\
+	Infliger X dégâts de froid dans la même partie.\\
+	Récompense : Classe Mage de froid
+	
+	\item Ils disaient que la terre était la source de toute vie... entre autre !\\
+	Infliger X dégâts de terre dans la même partie.\\
+	Récompense : Classe Mage de terre
+	
+	\item Tu m'appartiens désormais\\
+	Prendre le contrôle d'un golem des arcanes.\\
+	Récompense : Classe Arcaniste
+	
+	\item Un paysan, aucune différence ?\\
+	Gagner une partie sans utiliser de magie ni d'objet autre que les potions de soin\\
+	Récompense : Classe barbare
+	
+	\item Une ombre parmis les ombres\\
+	Accéder à la salle du boss sans affronter aucun ennemis\\
+	Récompense : Classe voleur
+	
+	\item Jisei pour un g33k\\
+	Se suicider 300 fois\\
+	Récompense : Classe Kévin
+	
+\end{itemize}
+
+\chapter{Item's Achievement}
 
 \part{Village}\label{Village}
 
-\part{HUD}\label{HUD}
+\part{XP du compte}
+
+\chapter{Qu'est ce que l'xp de compte}
+
+Le compte gagne de l'expérience à la fin de chaque partie selon ce que le joueur à accompli pendant sa partie. L'expérience de compte est gardé entre les parties.\\
+L'expérience sert à débloquer des options, des skins et des classes.\\
+Un suicide n'octroie aucune expérience, qu'importe ce qui à été accompli dans la partie.
+
+\chapter{Récompenses de l'expérience}
+
+\begin{itemize}
+	\item Niveau 1 ( XXX xp)\\
+	Débloque : ???
+	\item Niveau 2 ( XXX xp)\\
+	Débloque : ???
+	\item Niveau 3 ( XXX xp)\\
+	Débloque : ???
+	\item Niveau 4 ( XXX xp)\\
+	Débloque : ???
+	\item Niveau 5 ( XXX xp)\\
+	Débloque : ???
+	\item Niveau 6 ( XXX xp)\\
+	Débloque : ???
+	\item Niveau 7 ( XXX xp)\\
+	Débloque : ???
+	\item Niveau 8 ( XXX xp)\\
+	Débloque : ???
+	\item Niveau 9 ( XXX xp)\\
+	Débloque : ???
+	\item Niveau 10 ( XXX xp)\\
+	Débloque : ???
+\end{itemize}
+
+\part{GUI}\label{GUI}
+
+\chapter{HUD}\label{HUD}
+
+\part{Alpha}\label{Alpha}
+
+\chapter{Alpha1}
+
+\begin{itemize}
+	\item Déplacement du héro
+	\item Création de la carte du village, possibilité de se déplacer dessus
+	\item Génération d'une carte aléatoire sur laquelle le héro peut se déplacer
+	\item Sauvegarde du jeu
+\end{itemize}
+
+\part{Questionnement de développement}
+
+Peut on mettre des cutscenes et dialogues dans les combats ? Exemple le sphinx.
+
+\part{Glossaire}\label{Glossaire}
+
+DOT : Damages Of Time. Des dégats infligés à tous les débuts de tour de la cible des dégats ou du lanceur selon le type de dégâts.\label{DOT}
 
 
 %% <== End of hints
